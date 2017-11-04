@@ -5,6 +5,7 @@
         <title>Airbnb Optimization</title>
         <meta name="description" content="Tools and statistics to help Airbnb hosts in San Francisco">
         <meta name="viewport" content="width=device-width">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="./css/style.css"
     </head>
     <body>
@@ -23,31 +24,19 @@
             </div>
         </header>
 
-        <section id="display">
-            <div class="container">
-              <h1>Airbnb Solutions</h1>
-                <p>Boost your business using tools to maximize bookings and
-                  profit.  Stay up to date on trends and discover how other
-                  hosts are getting ahead.
-                </p>
-            </div>
-        </section>
-
-        <section id="info">
-            <div class="colcontainer">
-                <div class="col">
-                  <img src="./img/location.png">
-                  <h3>Location Based Optimization</h3>
-                    <p>Based on the location of your property, estimate weekly
-                    profit and maxium bookings.</p>
-                </div>
-                <div class="col">
-                  <img src="./img/graph.png">
-                  <h3>Consumer Trends</h3>
-                    <p>Organized data of most popular areas, housing types and
-                      etc..</p>
-                </div>
-            </div>
+        <section id="input">
+          <div id="container">
+            <h1>Input latitude and longitude to find average income:</h1>
+            <p>The coordinates of your property can be found
+              <a href="https://www.latlong.net/" target="_blank">here</a>.</p>
+              <form id="lat">
+                Latitude:<input name="latitude" type="text" size="20">
+              </form>
+              <form id="long">
+                longitude:<input name="longitude" type="text" size="20">
+              </form>
+              <button onclick="inputLat(); inputLong();">Submit</button>
+          </div>
         </section>
 
 
