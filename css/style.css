@@ -29,6 +29,11 @@ header a{
   font-size: 16;
 }
 
+header nav{
+  float:right;
+  margin-top: 35px;
+}
+
 header ul{
   padding:0;
   margin:0;
@@ -36,22 +41,24 @@ header ul{
 header li{
   float:left;
   display: inline;
-  padding: 0 20px 0 0;
+  padding: 0 20px 0 20px;
 }
-header #display{
-  float:left;
+
+header #title{
+  float: left;
   margin:0;
 }
 
-header .highlight, header .current a{
-  color:#35424a;
+
+header .current a{
+  color:black;
   font-weight: bold;
 }
 
 header a:hover{
   color:#000000;
-  font-wieght:bold;
 }
+
 
 /* Display */
 #display{
