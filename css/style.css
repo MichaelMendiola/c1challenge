@@ -18,6 +18,7 @@ body{
 header{
   background: #FF5A60;
   color:#ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
   padding-top: 5px;
   min-height: 70px;
   border-bottom:black 3px solid;
@@ -76,7 +77,6 @@ header a:hover{
 }
 #display p{
    font-size: 20px;
-
  }
 
  /* Info */
@@ -98,8 +98,138 @@ header a:hover{
   height: 100px;
 }
 
+/* input */
+#input {
+  text-align: center;
+  color: black;
+  padding-bottom: 20px;
+}
+#input h1{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+#input p{
+   font-size: 20px;
+ }
+
+#input form{
+  font-size: 15px;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+#lat {
+  height: 25px;
+  width: 250px;
+}
+#long {
+  height: 25px;
+  width: 250px;
+}
+.button {
+  height: 29px;
+  background: #FF5A60;
+  border: 0;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
+
+/* Table */
+div.table-title {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: arial, helvetica, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
 
 
+/* Table Styles */
+
+#table {
+  margin-bottom: 20px;
+}
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 600px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+th {
+  color: #FFFFFF;
+  background:#FF5A60;
+  border-bottom:4px solid #000000;
+  border-right: 1px solid #000000;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#FF5A60;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+tr:first-child {
+  border-top:none;
+}
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  border-right: 1px solid #C1C3D1;
+}
 
 
 
@@ -110,5 +240,4 @@ footer{
   width:100%;
   margin: auto;
   overflow: hidden;
-
 }

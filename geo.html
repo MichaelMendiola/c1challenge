@@ -6,7 +6,8 @@
         <meta name="description" content="Tools and statistics to help Airbnb hosts in San Francisco">
         <meta name="viewport" content="width=device-width">
         <script src="https://d3js.org/d3.v4.min.js"></script>
-        <link rel="stylesheet" href="./css/style.css"
+        <script  type="text/javascript" src="./js/geo.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <header>
@@ -25,21 +26,140 @@
         </header>
 
         <section id="input">
-          <div id="container">
-            <h1>Input latitude and longitude to find average income:</h1>
+          <div class="container">
+            <h1>Input latitude and longitude to find ideal price and average income:</h1>
             <p>The coordinates of your property can be found
               <a href="https://www.latlong.net/" target="_blank">here</a>.</p>
-              <form id="lat">
-                Latitude:<input name="lat" type="text" size="20">
+              <form id="latInput">Latitude:
+                <input id="lat" type="text" size="20" value = "37.72548701"/></br>
               </form>
-              <form id="long">
-                longitude:<input name="long" type="text" size="20">
+              <form id ="longInput">Longitude:
+                <input id="long" type="text" size="20" value = "-122.458269217782
+"/></br>
               </form>
-              <button onclick="inputLat(), inputLong()">Submit</button>
+              <div class = "btn">
+                <button id = "submit" class = "button" onclick= "arraySearch()">
+                  Submit</button>
+              </div>
           </div>
-          <script type="text/javascript" src="./js/geo.js"></script>
         </section>
 
+        <div id = "table">
+          <div class="table-title">
+            <h3>Ideal Price/Night</h3>
+          </div>
+          <table class="table-fill">
+            <thead>
+              <tr>
+                <th class="text-left">Property Type</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Property Type</th>
+                <th class="text-left">Price</th>
+              </tr>
+            </thead>
+          <tbody class="table-hover">
+            <tr>
+              <td id="prop1"></th>
+              <td id="price1"></th>
+              <td id="prop8"></th>
+              <td id="price8"></th>
+            </tr>
+            <tr>
+              <td id="prop2"></th>
+              <td id="price2"></th>
+              <td id="prop9"></th>
+              <td id="price9"></th>
+            </tr>
+            <tr>
+              <td id="prop3"></th>
+              <td id="price3"></th>
+              <td id="prop10"></th>
+              <td id="price10"></th>
+            </tr>
+            <tr>
+              <td id="prop4"></th>
+              <td id="price4"></th>
+              <td id="prop11"></th>
+              <td id="price11"></th>
+            </tr>
+            <tr>
+              <td id="prop5"></th>
+              <td id="price5"></th>
+              <td id="prop12"></th>
+              <td id="price12"></th>
+            </tr>
+            <tr>
+              <td id="prop6"></th>
+              <td id="price6"></th>
+              <td id="prop13"></th>
+              <td id="price13"></th>
+            </tr>
+            <tr>
+              <td id="prop7"></th>
+              <td id="price7"></th>
+              <td id="prop14"></th>
+              <td id="price14"></th>
+            </tr>
+          </tbody>
+          </table>
+          <div class="table-title">
+            <h3>Estimated Weekly Income</h3>
+          </div>
+          <table class="table-fill">
+            <thead>
+              <tr>
+                <th class="text-left">Property Type</th>
+                <th class="text-left">Price</th>
+                <th class="text-left">Property Type</th>
+                <th class="text-left">Price</th>
+              </tr>
+            </thead>
+            <tbody class ="table-hover">
+            <tr>
+              <td id="prop2_1"></th>
+              <td id="price2_1"></th>
+              <td id="prop2_8"></th>
+              <td id="price2_8"></th>
+            </tr>
+            <tr>
+              <td id="prop2_2"></th>
+              <td id="price2_2"></th>
+              <td id="prop2_9"></th>
+              <td id="price2_9"></th>
+            </tr>
+            <tr>
+              <td id="prop2_3"></th>
+              <td id="price2_3"></th>
+              <td id="prop2_10"></th>
+              <td id="price2_10"></th>
+            </tr>
+            <tr>
+              <td id="prop2_4"></th>
+              <td id="price2_4"></th>
+              <td id="prop2_11"></th>
+              <td id="price2_11"></th>
+            </tr>
+            <tr>
+              <td id="prop2_5"></th>
+              <td id="price2_5"></th>
+              <td id="prop2_12"></th>
+              <td id="price2_12"></th>
+            </tr>
+            <tr>
+              <td id="prop2_6"></th>
+              <td id="price2_6"></th>
+              <td id="prop2_13"></th>
+              <td id="price2_13"></th>
+            </tr>
+            <tr>
+              <td id="prop2_7"></th>
+              <td id="price2_7"></th>
+              <td id="prop2_14"></th>
+              <td id="price2_14"></th>
+            </tr>
+          </tbody>
+          </table>
+        </div>
 
         <footer>
             <p>Michael Mendiola - Capital One computer science challenge</p>
