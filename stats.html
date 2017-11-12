@@ -5,6 +5,7 @@
         <title>Airbnb Optimization</title>
         <meta name="description" content="Tools and statistics to help Airbnb hosts in San Francisco">
         <meta name="viewport" content="width=device-width">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
         <link rel="stylesheet" href="./css/style.css"
 
     </head>
@@ -24,32 +25,11 @@
             </div>
         </header>
 
-        <section id="display">
-            <div class="container">
-              <h1>Airbnb Solutions</h1>
-                <p>Boost your business using tools to maximize bookings and
-                  profit.  Stay up to date on trends and discover how other
-                  hosts are getting ahead.
-                </p>
-            </div>
-        </section>
 
-        <section id="info">
-            <div class="colcontainer">
-                <div class="col">
-                  <img src="./img/location.png">
-                  <h3>Location Based Optimization</h3>
-                    <p>Based on the location of your property, estimate weekly
-                    profit and maxium bookings.</p>
-                </div>
-                <div class="col">
-                  <img src="./img/graph.png">
-                  <h3>Consumer Trends</h3>
-                    <p>Organized data of most popular areas, housing types and
-                      etc..</p>
-                </div>
-            </div>
-        </section>
+        <div>
+          <svg class="chart"></svg>
+            <script  type="text/javascript" src="./js/graph.js"></script>
+        </div>
 
 
         <footer>

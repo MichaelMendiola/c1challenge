@@ -231,7 +231,15 @@ td {
   border-right: 1px solid #C1C3D1;
 }
 
+.chart rect {
+  fill: steelblue;
+}
 
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
 
 footer{
   background: black;
