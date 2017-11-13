@@ -1,3 +1,5 @@
+// Initialize variables as global and
+// parse csv files
 var data = [];
 var prop =[];
 var nbh = [];
@@ -25,7 +27,10 @@ d3.text("data/neighbourhood.csv", function(unParsed) {
     d.max_long = +d.max_long;
   })
 });
-
+  // arraySearch is called on click
+  // The neighbourhood is determined based on coordinates
+  // The average price and estimated weekly revenue is the calculated
+  // and passed to the table
   function arraySearch() {
     var x = parseFloat(document.getElementById('lat').value);
     var y = parseFloat(document.getElementById('long').value);
@@ -50,6 +55,8 @@ d3.text("data/neighbourhood.csv", function(unParsed) {
             prop[j].number++;
           }
         }
+
+      // set table values
       if (prop[j].number == 0){
         var pType = document.getElementById('prop' + (j+1));
         var price = document.getElementById('price' + (j+1));

@@ -25,6 +25,7 @@ var svg = d3.select("svg")
     .append("g")
       .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+// Parse data
 var ppl =[];
 d3.text("data/persons.csv", function(unParsed) {
     ppl = d3.csvParse(unParsed);
@@ -32,6 +33,7 @@ d3.text("data/persons.csv", function(unParsed) {
   x.domain(ppl.map(function(d) { return d.persons; }));
   y.domain([0, 2500]);
 
+  // create x axis
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -42,6 +44,7 @@ d3.text("data/persons.csv", function(unParsed) {
       .attr("dy", "-.55em")
       .attr("transform", "rotate(-90)" );
 
+  // create y axis
   svg.append("g")
       .attr("class", "y axis")
       .call(yAxis)
@@ -50,6 +53,7 @@ d3.text("data/persons.csv", function(unParsed) {
       .attr("y", 6)
       .attr("dy", ".71em")
 
+  // fill rectangles using ppl.price
   svg.selectAll("bar")
       .data(ppl)
     .enter().append("rect")
