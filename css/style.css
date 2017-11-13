@@ -18,7 +18,6 @@ body{
 header{
   background: #FF5A60;
   color:#ffffff;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
   padding-top: 5px;
   min-height: 70px;
   border-bottom:black 3px solid;
@@ -48,6 +47,7 @@ header li{
 header #title{
   float: left;
   margin:0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .5);
 }
 
 
@@ -231,14 +231,33 @@ td {
   border-right: 1px solid #C1C3D1;
 }
 
-.chart rect {
-  fill: steelblue;
+/** Occupants vs Price **/
+.axis {
+	  font: 10px sans-serif;
+	}
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: #b4b4b4;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
 }
-
-.chart text {
-  fill: white;
-  font: 10px sans-serif;
-  text-anchor: middle;
+h2 {
+  text-align: left;
+  font-size: 15px;
+  margin-left: 10%;
 }
 
 footer{
