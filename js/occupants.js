@@ -16,6 +16,7 @@ var yAxis = d3.axisLeft()
     .scale(y)
     .ticks(15);
 
+// Create tooltip div
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
@@ -48,8 +49,6 @@ d3.text("data/persons.csv", function(unParsed) {
       .attr("transform", "rotate(-90)")
       .attr("y", 6)
       .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Price ($)");
 
   svg.selectAll("bar")
       .data(ppl)
